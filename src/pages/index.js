@@ -68,13 +68,32 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>DOGE(XRPL)</title>
-        <meta name="description" content="Department of Government Efficiency (D.O.G.E.) on $XRP | Not affiliated with @DOGE"/>
+        <title>DOGE(XRPL) | Department of Government Efficiency on $XRP</title>
+        <meta name="description"
+              content="Department of Government Efficiency (D.O.G.E.) on $XRP | Not affiliated with @DOGE"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="DOGE (XRPL) | Department of Government Efficiency on $XRP"/>
+        <meta property="og:url" content="https://dogexrpl.com"/>
+        <meta property="og:image" content="/dogexrpl-open-graph.jpg"/>
+        <meta property="og:description"
+              content="Department of Government Efficiency (D.O.G.E.) on $XRP | Not affiliated with @DOGE"/>
         <meta
           name="twitter:widgets:autoload"
           content="on"/>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/favicons/favicon.ico"/>
+        <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96"/>
+        <link rel="icon" type="image/svg+xml" href="/favicons/favicon.svg"/>
+        <link rel="shortcut icon" href="/favicons/favicon.ico"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png"/>
+        <link rel="manifest" href="/favicons/site.webmanifest"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:title" content="DOGE(XRPL) | Department of Government Efficiency on $XRP"/>
+        <meta name="twitter:site" content="@dogexrpl"/>
+        <meta name="twitter:image" content="/dogexrpl-open-graph.jpg"/>
+        <meta name="twitter:description"
+              content="Department of Government Efficiency (D.O.G.E.) on $XRP | Not affiliated with @DOGE"/>
+        <meta name="twitter:image:alt" content="@DOGEXRPL"/>
       </Head>
       <div className={bebasNeue.className}>
 
