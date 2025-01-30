@@ -25,6 +25,11 @@ export default function Home() {
   const [priceChange6, setPriceChange6] = useState('');
   const [priceChange24, setPriceChange24] = useState('');
   const [error, setError] = useState(null); // State for errors
+  const [iframeLoaded, setIframeLoaded] = useState(false);
+
+  const handleLoad = () => {
+    setIframeLoaded(true);
+  };
 
   // Function to fetch data
   const fetchData = async () => {
@@ -146,9 +151,13 @@ export default function Home() {
           </div>
 
           {/* DEBT CLOCK */}
-          <div className={styles['debt-clock']}>
-            <iframe src="https://www.usdebtclock.org/?embed=true" frameBorder="0"></iframe>
+
+          <div className={iframeLoaded ? styles['debt-clock'] : styles['debt-clock--hidden']}>
+
+              <iframe onLoad={handleLoad} src="https://usdebtclock.org" frameBorder="0"></iframe>
+
           </div>
+
 
           {/* MEMES */}
           <Cards/>

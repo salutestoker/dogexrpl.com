@@ -342,6 +342,14 @@
   }
 }
 
+.debt-clock[display="none"] {
+  color: red;
+}
+
+.debt-clock--hidden + * {
+  margin-top: -55vw;
+}
+
 .footer {
   position: relative;
   z-index: 16;
