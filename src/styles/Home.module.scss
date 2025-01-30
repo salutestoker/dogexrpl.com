@@ -1,3 +1,27 @@
+.clouds {
+  position: absolute;
+  width: 100dvw;
+  height: 90dvh;
+  top: 75px;
+  left: 0;
+  z-index: 11;
+  pointer-events: none;
+  mix-blend-mode: plus-lighter;
+  transition: opacity .25s ease;
+  opacity: 0;
+  animation: 1s ease 4.3s normal forwards 1 clouds;
+
+  @media screen and (max-width: 830px) {
+    top: 50px;
+  }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .banner {
   position: fixed;
   top: 0;
@@ -386,6 +410,11 @@
 @keyframes banner {
   0% {opacity: 0; transform: translate3d(-50%, -100%, 0);}
   100% {opacity: 1; transform: translate3d(-50%, 0, 0);}
+}
+
+@keyframes clouds {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 @keyframes logo {

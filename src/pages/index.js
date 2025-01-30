@@ -108,12 +108,23 @@ export default function Home() {
 
         <FullScreenVideo/>
 
+        <div className={styles.clouds}>
+          <video autoPlay loop muted playsInline>
+            <source
+              src="/videos/moving-clouds--large-hevc.mov"
+              type='video/mp4; codecs="hvc1"'/>
+            <source
+              src="/videos/moving-clouds--large.webm"
+              type="video/webm"/>
+          </video>
+        </div>
+
         {/* Header */}
         <div className={styles.header}>
           <div className={styles.header__inner}>
             <Image className={styles.header__logo} width="192" height="200" src="/dogexrpl-logo.png" alt=""/>
             <div className={styles.header__animate}>
-              <div className={styles.header__items}>
+            <div className={styles.header__items}>
                 <ul>
                   <li className="mktcap"><span>MktCap:</span> ${mkcap.toLocaleString()} <sup>USD</sup></li>
                   <li className="mktcap"><span>24hr:</span> {priceChange24} <sup>%</sup></li>
