@@ -1,0 +1,97 @@
+.ticker {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px 0;
+  height: 40px;
+  background: rgba(0,0,0,.2);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 40s;
+  display: flex;
+  align-items: center;
+
+  div,
+  span{
+    display: flex;
+    align-items: center;
+  }
+
+  .label {
+    margin-right: 15px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    > * {
+      margin-right: 70px;
+    }
+  }
+}
+
+#dexscreener-embed {
+  display: none;
+}
+
+.change {
+  display: flex;
+
+  span {
+    margin-right: 10px;
+
+    &:after {
+      content: ":";
+    }
+  }
+
+  div {
+    display: inline-block;
+    background: forestgreen;
+    padding: 2px 10px;
+
+    &.down {
+      background: rgba(55,55,55,.6);
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+
+.ticker-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ticker {
+  display: flex;
+  animation: ticker 70s linear infinite;
+}
+
+.ticker-item {
+  padding: 10px;
+  white-space: nowrap;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
