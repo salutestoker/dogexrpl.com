@@ -39,6 +39,77 @@ a {
   text-decoration: none;
 }
 
+.shop {
+  position: relative;
+  z-index: 545;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop__image-wrapper {
+  width: 800px;
+  margin: 0 auto 40px;
+  position: relative;
+  max-width: 90%;
+  aspect-ratio: 16/6;
+}
+
+.shop__image-wrapper img {
+  object-fit: cover;
+  object-position: center 30%;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #010e1e;
+}
+
+.shop__button {
+  background: linear-gradient(to bottom,  #216b9c 33%,#185176 68%);
+  padding: 16px 32px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 5;
+  transition: transform .25s ease-in-out;
+  transform: translate3d(0,0,0)
+}
+
+.shop__button-wrapper {
+  transition: transform .25s ease-in-out;
+  transform: translate3d(0,-50%,0)
+}
+
+.shop__image-wrapper:hover .shop__button-wrapper {
+  transform: translate3d(0,-100%,0)
+}
+
+.shop__button:before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(to bottom,  #fab335 33%,#f7d46e 68%);
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 20px;
+  animation: .75s ease 4.6s normal forwards 1 dexborder;
+  transform: translate(-50%,-50%)
+}
+
+@media screen and (max-width: 800px) {
+  .shop__button {
+    font-size: 18px;
+  }
+  .shop__image-wrapper img {
+    margin-top: 25px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -146,6 +146,16 @@ export default function Home() {
           </div>
         </div>
 
+        <section className="shop">
+          <a target="_blank" href="https://lux-leigh.square.site/shop/doge/L3Q7JQ65QBVGD6YNXV2TZOGG" className="shop__image-wrapper">
+            <img src="/shop-image.png" alt=""/>
+            <div className="shop__button-wrapper">
+              <span  className="shop__button">Shop now</span>
+            </div>
+          </a>
+
+        </section>
+
         <div className={styles.memes}>
           <img src="/mountain-vector-bg.svg" alt=""/>
           <div className={styles['twitter-timeline']}>
